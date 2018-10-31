@@ -551,6 +551,7 @@ export default class XMPP extends Listenable {
         if (Array.isArray(p2pStunServers)) {
             logger.info('P2P STUN servers: ', p2pStunServers);
             iceConfig.p2p.iceServers = p2pStunServers;
+            iceConfig.jvb.iceServers = p2pStunServers;
         }
 
         if (this.options.p2p && this.options.p2p.iceTransportPolicy) {
